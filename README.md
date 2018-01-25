@@ -3,7 +3,7 @@
 
 ## Description
 
-You can automatically login the "Tokyo Tech Wi-Fi" with the Selenium, an UI testing tool in browser.
+You can automatically login the "Tokyo Tech Wi-Fi" with the Selenium, an UI testing tool in browsers.
 
 ## Usage
 
