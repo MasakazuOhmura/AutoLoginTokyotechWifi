@@ -1,8 +1,5 @@
 import os
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 URL = 'https://wlanauth.noc.titech.ac.jp/fs/customwebauth/techauth.html?switch_url=https://wlanauth.noc.titech.ac.jp/login.html&ap_mac=04:c5:a4:93:7c:60&client_mac=54:26:96:e1:0a:4f&wlan=TokyoTech&redirect=www.gstatic.com/generate_204'
 
