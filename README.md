@@ -8,6 +8,7 @@ You can automatically login the "Tokyo Tech Wi-Fi" with the Selenium, an UI test
 ## Usage
 
 1. Replace "username" and "password" with your own.
+2. Execute .command file.
 
 ## Installation
 
