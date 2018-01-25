@@ -1,2 +1,6 @@
 # AutoLoginTokyotechWifi
-Tokyo Tech Wifiへの接続前認証を自動で行う
+
+python -V # => 3.5.0
+pip install selenium
+brew install chromedriver
+
