@@ -1,4 +1,5 @@
 import os
+from contextlib import closing
 
 from selenium import webdriver
 
@@ -8,18 +9,15 @@ URL = 'https://wlanauth.noc.titech.ac.jp/fs/customwebauth/techauth.html?switch_u
 
 
 def main():
-    driver = webdriver.Chrome()
-    driver.get(URL)
+    with closing(webdriver.Chrome()) as driver:
+        driver.get(URL)
 
-    username = os.getenv("TOKYOTECH_USERNAME", conf.TOKYOTECH_USERNAME)
-    password = os.getenv("TOKYOTECH_PASSWORD", conf.TOKYOTECH_PASSWORD)
+        username = os.getenv("TOKYOTECH_USERNAME", conf.TOKYOTECH_USERNAME)
+        password = os.getenv("TOKYOTECH_PASSWORD", conf.TOKYOTECH_PASSWORD)
 
-    driver.find_element_by_id('username').send_keys(username)
-    driver.find_element_by_id('password').send_keys(password)
-    driver.find_element_by_class_name('button').click()
-
-    driver.quit()
-    driver.close()
+        driver.find_element_by_id('username').send_keys(username)
+        driver.find_element_by_id('password').send_keys(password)
+        driver.find_element_by_class_name('button').click()
 
 
 if __name__ == '__main__':
